@@ -7,8 +7,10 @@ __website__ = 'https://github.com/nschloe/pygmsh'
 
 from pygmsh.geometry import Geometry
 from pygmsh.helper import *
+from pygmsh.mesh import Mesh
 
 __all__ = [
         'geometry',
-        'helper'
+        'helper',
+		'mesh'
         ]

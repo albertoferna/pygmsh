@@ -165,6 +165,12 @@ class Geometry(object):
             )
         return
 
+    def mark_recombine_surface(self, surface):
+        # set a particular surface to mesh as quads
+        self._GMSH_CODE.append(
+            'Recombine Surface{%s};' % (surface)
+        )
+
     def add_volume(self, surface_loop):
         self._VOLUME_ID += 1
         name = 'vol%d' % self._VOLUME_ID
